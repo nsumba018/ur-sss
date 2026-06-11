@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1F2937;
+    background-color: #F7F8F7;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #316123;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-ur-green-primary text-white px-5 py-3 rounded-md font-semibold text-sm transition-all duration-300 hover:bg-ur-green-secondary hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 border border-ur-green-primary text-ur-green-primary px-5 py-3 rounded-md font-semibold text-sm transition-all duration-300 hover:bg-ur-green-primary hover:text-white;
+  }
+
+  .section-container {
+    @apply max-w-[1180px] mx-auto px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-kicker {
+    @apply text-ur-green-primary font-bold text-xs uppercase tracking-[0.18em] mb-3 block;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-ur-dark leading-tight;
+  }
+
+  .section-copy {
+    @apply text-sm sm:text-base text-gray-600 leading-relaxed;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
