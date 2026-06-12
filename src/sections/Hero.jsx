@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa'
+import heroBg from '../assets/hero.png'
 
 const highlights = ['Surgical Skills', 'Research', 'Professional Growth']
 
@@ -8,11 +9,11 @@ export default function Hero() {
     <section id="home" className="relative min-h-[760px] overflow-hidden bg-ur-green-primary text-white md:min-h-screen">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1600&q=85"
-          alt="Medical students in a practical training session"
+          src={heroBg}
+          alt="Experienced surgeon mentoring students"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ur-green-primary/70 via-ur-green-primary/78 to-ur-green-primary" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ur-green-primary/85 via-ur-green-primary/80 to-ur-green-primary/70" />
         <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-ur-green-light to-transparent" />
       </div>
 
@@ -26,13 +27,13 @@ export default function Hero() {
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 backdrop-blur-sm">
               <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
-              <span className="text-xs font-bold uppercase tracking-[0.16em] text-white/85">Academic Excellence</span>
+              <span className="text-xs font-bold uppercase tracking-[0.16em] text-white">Academic Excellence</span>
             </div>
 
             <h1 className="text-4xl font-extrabold leading-[1.04] tracking-normal text-balance sm:text-5xl lg:text-[3.5rem]">
               Empowering the Next Generation of Surgeons in Rwanda
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-7 text-white/85 sm:text-lg">
+            <p className="mt-5 max-w-xl text-base leading-7 text-white/90 sm:text-lg">
               UR-SSS is a student-led academic society advancing surgical education, research, mentorship, and innovation at the University of Rwanda.
             </p>
 
