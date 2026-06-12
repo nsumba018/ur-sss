@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa'
 
-const highlights = ['Surgical skills', 'Research', 'Mentorship']
+const highlights = ['Surgical Skills', 'Research', 'Professional Growth']
 
 export default function Hero() {
   return (
@@ -17,23 +17,23 @@ export default function Hero() {
       </div>
 
       <div className="section-container relative z-10 flex min-h-[760px] flex-col justify-end pb-10 pt-28 md:min-h-screen lg:justify-center lg:pb-20">
-        <div className="grid items-end gap-7 lg:grid-cols-[1.05fr_0.75fr] lg:gap-14">
+        <div className="grid items-end gap-7 lg:grid-cols-[1.05fr_0.85fr] lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="max-w-2xl"
           >
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-green-300" />
-              <span className="text-xs font-bold uppercase tracking-[0.16em] text-white/85">University of Rwanda</span>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 backdrop-blur-sm">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
+              <span className="text-xs font-bold uppercase tracking-[0.16em] text-white/85">Academic Excellence</span>
             </div>
 
-            <h1 className="text-4xl font-extrabold leading-[1.04] tracking-normal text-balance sm:text-5xl lg:text-6xl">
-              Surgical Students Society
+            <h1 className="text-4xl font-extrabold leading-[1.04] tracking-normal text-balance sm:text-5xl lg:text-[3.5rem]">
+              Empowering the Next Generation of Surgeons in Rwanda
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-7 text-white/84 sm:text-lg">
-              A student-led community advancing surgical education, research, mentorship, and service for future surgeons in Rwanda.
+            <p className="mt-5 max-w-xl text-base leading-7 text-white/85 sm:text-lg">
+              UR-SSS is a student-led academic society advancing surgical education, research, mentorship, and innovation at the University of Rwanda.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -51,7 +51,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 34 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="rounded-lg bg-white p-4 text-ur-dark shadow-2xl lg:mb-4"
+            className="rounded-lg bg-white p-5 text-ur-dark shadow-2xl lg:mb-4"
           >
             <div className="relative h-44 overflow-hidden rounded-md">
               <img
@@ -64,9 +64,9 @@ export default function Hero() {
               </span>
             </div>
             <div className="pt-4">
-              <h2 className="text-lg font-extrabold leading-snug">Infection Control & Surgical Materials Workshop</h2>
+              <h2 className="text-lg font-extrabold leading-snug">Medical Student Training & Surgical Materials Workshop</h2>
               <p className="mt-2 text-sm leading-6 text-gray-600">
-                Practical preparation for clinical environments, sterile technique, and instrument handling.
+                Practical preparation for clinical and surgical environments.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {highlights.map((item) => (
@@ -76,13 +76,16 @@ export default function Hero() {
                 ))}
               </div>
               <div className="mt-4 space-y-2">
-                {['Hands-on practice', 'Senior mentorship', 'Certificate of completion'].map((item) => (
+                {['Hands-on surgical practice', 'Expert mentorship included', 'Certification upon completion'].map((item) => (
                   <div key={item} className="flex items-center gap-2 text-sm text-gray-600">
                     <FaCheckCircle className="text-ur-green-primary" size={14} />
                     {item}
                   </div>
                 ))}
               </div>
+              <button className="btn-primary mt-5 w-full bg-ur-green-primary text-white hover:bg-ur-green-secondary">
+                Apply Now
+              </button>
             </div>
           </motion.aside>
         </div>

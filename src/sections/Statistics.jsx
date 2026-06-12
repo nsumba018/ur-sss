@@ -2,10 +2,10 @@ import { useEffect, useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const stats = [
-  { number: 2014, suffix: '', label: 'Founded' },
-  { number: 60, suffix: '+', label: 'Student members' },
-  { number: 5, suffix: '', label: 'Directorates' },
-  { number: null, suffix: 'Growing', label: 'Impact' },
+  { number: 2014, suffix: '', label: 'Society Founded' },
+  { number: 60, suffix: '+', label: 'Early Members' },
+  { number: 5, suffix: '', label: 'Core Directorates' },
+  { number: null, suffix: 'Growing', label: 'Community Impact' },
 ]
 
 function AnimatedCounter({ number, suffix, isInView }) {

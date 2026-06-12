@@ -1,23 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaArrowRight, FaBullseye, FaEye, FaUsers } from 'react-icons/fa'
-
-const pillars = [
-  {
-    icon: FaBullseye,
-    title: 'Mission',
-    body: 'Equip medical students with practical surgical skills, research habits, and ethical clinical leadership.',
-  },
-  {
-    icon: FaEye,
-    title: 'Vision',
-    body: 'Develop a strong pipeline of compassionate, globally competitive surgeons from Rwanda.',
-  },
-  {
-    icon: FaUsers,
-    title: 'Community',
-    body: 'Connect students, residents, faculty, and partners through learning, service, and mentorship.',
-  },
-]
+import { FaArrowRight } from 'react-icons/fa'
 
 export default function About() {
   return (
@@ -38,10 +20,16 @@ export default function About() {
                 className="h-[360px] w-full object-cover sm:h-[440px]"
               />
             </div>
-            <div className="absolute bottom-4 left-4 rounded-md bg-white/95 px-4 py-3 shadow-lg backdrop-blur-sm">
-              <div className="text-2xl font-extrabold text-ur-green-primary">10+</div>
-              <div className="text-xs font-bold uppercase tracking-[0.14em] text-gray-500">Years active</div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="absolute -bottom-4 -right-4 rounded-md bg-ur-green-primary p-5 text-white shadow-lg"
+            >
+              <div className="text-2xl font-extrabold">10</div>
+              <div className="text-xs font-bold uppercase tracking-[0.14em] text-white/80">Years of<br />Excellence</div>
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -51,20 +39,44 @@ export default function About() {
             transition={{ duration: 0.65, delay: 0.1 }}
           >
             <span className="section-kicker">About UR-SSS</span>
-            <h2 className="section-title max-w-xl">Fostering academic rigor and surgical innovation.</h2>
+            <h2 className="section-title max-w-xl">Fostering Academic Rigor & Surgical Innovation</h2>
             <p className="section-copy mt-5 max-w-2xl">
-              Founded at the University of Rwanda College of Medicine and Health Sciences, UR-SSS helps students move from classroom knowledge to confident clinical practice through workshops, research, mentorship, and community outreach.
+              Founded in 2014 at the College of Medicine & Health Sciences, UR-SSS is committed to medical education and professional advancement. We build pathways for students to operating theatres through research, mentorship, and leadership experiences.
             </p>
 
-            <div className="mt-7 grid gap-3 sm:grid-cols-3">
-              {pillars.map((pillar) => (
-                <div key={pillar.title} className="rounded-lg border border-gray-100 bg-white p-4 shadow-sm">
-                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-md bg-ur-green-light text-ur-green-primary">
-                    <pillar.icon size={18} />
-                  </div>
-                  <h3 className="font-extrabold text-ur-dark">{pillar.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-gray-600">{pillar.body}</p>
+            <div className="mt-7 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-lg border border-gray-100 bg-white p-5 shadow-sm">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-md bg-ur-green-light text-ur-green-primary">
+                  <div className="h-5 w-5 rounded bg-ur-green-primary" />
                 </div>
+                <h3 className="font-extrabold text-ur-dark">Our Mission</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600">
+                  To equip future surgeons with practical skills, research acumen, and professional networks.
+                </p>
+              </div>
+              <div className="rounded-lg border border-gray-100 bg-white p-5 shadow-sm">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-md bg-ur-green-light text-ur-green-primary">
+                  <div className="h-5 w-5 rounded bg-ur-green-secondary" />
+                </div>
+                <h3 className="font-extrabold text-ur-dark">Our Vision</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600">
+                  To be the leading student surgical society in East Africa, producing world-class surgeons.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              {['Mission', 'Vision', 'History', 'Leadership'].map((tab) => (
+                <button
+                  key={tab}
+                  className={`rounded-md px-4 py-2 text-sm font-bold transition-colors ${
+                    tab === 'Mission'
+                      ? 'bg-ur-green-primary text-white'
+                      : 'bg-white text-gray-600 hover:bg-ur-green-light'
+                  }`}
+                >
+                  {tab}
+                </button>
               ))}
             </div>
 

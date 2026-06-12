@@ -5,26 +5,26 @@ const events = [
   {
     day: '12',
     month: 'FEB',
-    title: 'Surgical Grand Rounds',
+    title: 'Surgical Workshop',
     location: 'CMHS Teaching Hospital',
-    description: 'Case discussion and practical decision-making with senior clinicians.',
+    description: 'Hands-on suturing, knot-tying, and instrument handling session for preclinical students.',
     image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=85',
   },
   {
     day: '24',
     month: 'MAR',
-    title: 'Laparoscopy Basics',
+    title: 'Research Presentation',
     location: 'UR Skills Lab',
-    description: 'Introduction to minimally invasive technique and simulation practice.',
-    image: 'https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=800&q=85',
+    description: 'Student research presentations and poster sessions exploring general and sub-specialty surgery topics.',
+    image: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&w=800&q=85',
   },
   {
     day: '05',
     month: 'APR',
-    title: 'Research Symposium',
+    title: 'Guest Lecture Series',
     location: 'Kigali Convention Center',
-    description: 'Student presentations, posters, and awards in surgical research.',
-    image: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&w=800&q=85',
+    description: 'Distinguished visiting surgeons share insights on global surgery, career pathways, and innovation.',
+    image: 'https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=800&q=85',
   },
 ]
 
@@ -40,11 +40,11 @@ export default function Events() {
         >
           <div className="max-w-2xl">
             <span className="section-kicker">Calendar</span>
-            <h2 className="section-title">Upcoming events.</h2>
-            <p className="section-copy mt-4">Workshops, rounds, and research activities designed for active participation.</p>
+            <h2 className="section-title">Upcoming Events</h2>
+            <p className="section-copy mt-4">Workshops, presentations, lectures, and community outreach designed for active participation.</p>
           </div>
-          <button className="inline-flex items-center gap-2 text-sm font-bold text-ur-green-primary">
-            View calendar
+          <button className="inline-flex items-center gap-2 text-sm font-bold text-ur-green-primary transition hover:gap-3">
+            View full calendar
             <FaArrowRight size={12} />
           </button>
         </motion.div>
@@ -60,7 +60,7 @@ export default function Events() {
               className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="relative h-48 overflow-hidden">
-                <img src={event.image} alt={event.title} className="h-full w-full object-cover" />
+                <img src={event.image} alt={event.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute left-4 top-4 rounded-md bg-white px-3 py-2 text-center shadow-md">
                   <div className="text-xl font-extrabold leading-none text-ur-green-primary">{event.day}</div>
                   <div className="mt-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-gray-500">{event.month}</div>
@@ -77,6 +77,9 @@ export default function Events() {
                   {event.location}
                 </div>
                 <p className="mt-3 text-sm leading-6 text-gray-600">{event.description}</p>
+                <button className="btn-primary mt-5 w-full border-2 border-ur-green-primary bg-white text-ur-green-primary hover:bg-ur-green-primary hover:text-white">
+                  Register
+                </button>
               </div>
             </motion.article>
           ))}
