@@ -15,8 +15,8 @@ export default function About() {
           >
             <div className="overflow-hidden rounded-lg shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=85"
-                alt="Medical students collaborating"
+                src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=900&q=85"
+                alt="Surgeons performing a procedure"
                 className="h-[360px] w-full object-cover sm:h-[440px]"
               />
             </div>

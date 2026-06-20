@@ -60,8 +60,8 @@ export default function Directorates() {
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
               className={`group overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg ${
-                index === 0 ? 'md:col-span-2 lg:col-span-2' : index === 3 ? 'md:col-span-2 lg:col-span-1' : 'lg:col-span-1'
-              }`}
+                index === 0 ? 'md:col-span-2' : index === 3 ? 'md:col-span-2' : ''
+              } lg:col-span-1`}
             >
               <div className="relative h-44 overflow-hidden">
                 <img

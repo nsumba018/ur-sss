@@ -57,16 +57,16 @@ export default function Events() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.08 }}
-              className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              className="group flex flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 shrink-0 overflow-hidden">
                 <img src={event.image} alt={event.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute left-4 top-4 rounded-md bg-white px-3 py-2 text-center shadow-md">
                   <div className="text-xl font-extrabold leading-none text-ur-green-primary">{event.day}</div>
                   <div className="mt-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-gray-500">{event.month}</div>
                 </div>
               </div>
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <div className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-gray-500">
                   <FaCalendar size={12} className="text-ur-green-primary" />
                   UR-SSS Event
@@ -77,7 +77,7 @@ export default function Events() {
                   {event.location}
                 </div>
                 <p className="mt-3 text-sm leading-6 text-gray-600">{event.description}</p>
-                <button className="btn-primary mt-5 w-full border-2 border-ur-green-primary bg-white text-ur-green-primary hover:bg-ur-green-primary hover:text-white">
+                <button className="btn-primary mt-auto w-full border-2 border-ur-green-primary bg-white text-ur-green-primary hover:bg-ur-green-primary hover:text-white">
                   Register
                 </button>
               </div>
