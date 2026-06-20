@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
 
 const quickLinks = [
-  { label: 'About Us', href: '#about' },
-  { label: 'Directorates', href: '#directorates' },
-  { label: 'Events', href: '#events' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Directorates', href: '/directorates' },
+  { label: 'Programs', href: '/programs' },
+  { label: 'Events', href: '/events' },
+  { label: 'Gallery', href: '/gallery' },
 ]
 
 const programs = [
@@ -36,12 +37,12 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-2 mb-6">
+            <Link to="/" className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 bg-ur-green-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">UR</span>
               </div>
               <span className="font-bold text-xl">UR-SSS</span>
-            </div>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               The University of Rwanda Surgical Students Society is dedicated to advancing surgical education, research, and mentorship for the next generation of healthcare leaders in Rwanda.
             </p>
@@ -74,12 +75,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-400 text-sm hover:text-ur-green-accent transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -1,35 +1,27 @@
-import Navbar from './components/Navbar'
-import Hero from './sections/Hero'
-import Statistics from './sections/Statistics'
-import About from './sections/About'
-import Directorates from './sections/Directorates'
-import FeaturedOpportunity from './sections/FeaturedOpportunity'
-import Events from './sections/Events'
-import Journey from './sections/Journey'
-import Gallery from './sections/Gallery'
-import Testimonials from './sections/Testimonials'
-import Partners from './sections/Partners'
-import Footer from './sections/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import MainLayout from './layouts/MainLayout'
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
+import DirectoratesPage from './pages/DirectoratesPage'
+import ProgramsPage from './pages/ProgramsPage'
+import EventsPage from './pages/EventsPage'
+import GalleryPage from './pages/GalleryPage'
+import ContactPage from './pages/ContactPage'
+import JoinPage from './pages/JoinPage'
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-ur-green-light">
-      <Navbar />
-      <main>
-        <Hero />
-        <Statistics />
-        <About />
-        <Directorates />
-        <FeaturedOpportunity />
-        <Events />
-        <Journey />
-        <Gallery />
-        <Testimonials />
-        <Partners />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout><HomePage /></MainLayout>} />
+        <Route path="/about" element={<MainLayout><AboutPage /></MainLayout>} />
+        <Route path="/directorates" element={<MainLayout><DirectoratesPage /></MainLayout>} />
+        <Route path="/programs" element={<MainLayout><ProgramsPage /></MainLayout>} />
+        <Route path="/events" element={<MainLayout><EventsPage /></MainLayout>} />
+        <Route path="/gallery" element={<MainLayout><GalleryPage /></MainLayout>} />
+        <Route path="/contact" element={<MainLayout><ContactPage /></MainLayout>} />
+        <Route path="/join" element={<MainLayout><JoinPage /></MainLayout>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App
