@@ -2,12 +2,12 @@ import { motion } from 'framer-motion'
 import { FaArrowRight } from 'react-icons/fa'
 
 const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=85', label: 'Outreach', size: 'xl' },
-  { src: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=85', label: 'Surgical Skills', size: 'sm' },
-  { src: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=85', label: 'Training', size: 'sm' },
-  { src: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=85', label: 'Research', size: 'md' },
+  { src: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=85', label: 'Community Outreach', size: 'xl' },
+  { src: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=85', label: 'Surgical Education', size: 'sm' },
+  { src: 'https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=800&q=85', label: 'Skills Lab Practice', size: 'sm' },
+  { src: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&w=800&q=85', label: 'Conference & Inspiration', size: 'md' },
   { src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=85', label: 'Mentorship', size: 'md' },
-  { src: 'https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=800&q=85', label: 'Leadership', size: 'sm' },
+  { src: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=85', label: 'Training & Education', size: 'sm' },
 ]
 
 export default function Gallery() {

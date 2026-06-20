@@ -131,16 +131,16 @@ export default function Footer() {
             {/* Newsletter */}
             <div className="mt-8">
               <h4 className="font-semibold text-sm mb-3">Newsletter</h4>
-              <div className="flex gap-2">
+              <div className="flex flex-col gap-2 sm:flex-row">
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 bg-white/10 border border-white/20 rounded-md px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-ur-green-primary transition-colors"
+                  className="w-full bg-white/10 border border-white/20 rounded-md px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-ur-green-primary transition-colors sm:flex-1"
                 />
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-ur-green-primary text-white px-4 py-2.5 rounded-md text-sm font-medium hover:bg-ur-green-secondary transition-colors"
+                  className="w-full whitespace-nowrap bg-ur-green-primary text-white px-4 py-2.5 rounded-md text-sm font-medium hover:bg-ur-green-secondary transition-colors sm:w-auto"
                 >
                   Subscribe
                 </motion.button>
